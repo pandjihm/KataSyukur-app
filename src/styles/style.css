@@ -5,91 +5,104 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #202124;
-  color: white;
+  font-family: 'Manrope', sans-serif;
+  background-color: #F3F4F6;
 }
 
 input, textarea {
   padding: 12px;
   margin: 12px 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Manrope', sans-serif;
   background-color: transparent;
-  color: white;
+  color: #A3A6AE;
   border: 1px solid #aaa;
   border-radius: 4px;
 }
 
 input::placeholder, textarea::placeholder {
   color: #aaa;
-  font-weight: bold;
 }
 
-.note-app__header {
+.syukur-app__header {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 4px 16px;
-  border-bottom: 1px solid #aaa;
+  background-color: #242345;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.note-app__header h1 {
-  margin: 8px 0;
-  flex: 1;
-  color: white;
-}
-
-
-.note-app__body {
+.syukur-app__body {
   max-width: 1000px;
   margin: 16px auto;
   padding: 12px;
 }
 
-.note-app__body h2 {
-  font-weight: normal;
+.syukur-app__body h2 {
+  font-family: Montserrat;
+  letter-spacing: 0.3em;
   margin: 16px 0;
+  padding: 80px 0px 20px 5px;
+  color: #53526B;
 }
 
-.note-input {
+.syukur-app__body h3 {
+  font-family: Montserrat;
+  letter-spacing: 0.3em;
+  margin: 16px 0;
+  color: #A3A6AE;
+}
+
+.syukur-input {
   margin: 0 auto;
   max-width: 500px;
   margin-bottom: 48px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 3px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
-.note-input input, .note-input textarea {
+.syukur-input input, .syukur-input textarea {
   display: block;
+  border: none;
   width: 100%;
 }
 
-.note-input__title {
-  font-weight: bold;
+.syukur-input__title {
+  font-family: Manrope;
+  font-weight: 400;
+  color: #A3A6AE;
 }
 
-.note-input__title__char-limit {
-  font-size: 14px;
+.syukur-input__title__char-limit {
+  font-size: 12px;
   text-align: right;
+  margin-right: 2px;
   color: #aaa;
 }
 
-.note-input__body {
+.syukur-input__body {
   min-height: 175px;
 }
 
-.note-input button {
+.syukur-input button {
   display: block;
   width: 100%;
-  padding: 8px;
-  background-color: transparent;
-  font-family: 'Inter', sans-serif;
-  color: white;
-  border: 1px solid #aaa;
-  border-radius: 4px;
+  padding: 10px;
+  font-family: 'Manrope', sans-serif;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  background-color: #1FDC6B;
   font-weight: bold;
   cursor: pointer;
 }
 
-.notes-list {
+.syukur-input button:hover {
+  background-color: #19AE55;
+}
+.syukur-list {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: minmax(min-content, max-content);
@@ -97,92 +110,112 @@ input::placeholder, textarea::placeholder {
   margin-bottom: 48px;
 }
 
-.notes-list__empty-message {
+.syukur-list__empty-message {
+  font-size: 12px;
   text-align: center;
   color: #aaa;
 }
 
-.note-item {
-  border: 1px solid #aaa;
+.syukur-item {
   border-radius: 4px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  background-color: #ffffff;
 }
 
-.note-item__content {
+.syukur-item__content {
+  margin: 8px;
   padding: 12px;
   flex: 1;
 }
 
-.note-item__title {
+.syukur-item__title {
+  font-size: 21px;
+  color: #242345;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   margin-bottom: 4px;
 }
 
-.note-item__date {
+.syukur-item__date {
   font-size: 12px;
   margin-bottom: 8px;
   color: #aaa;
 }
 
-.note-item__body {
-  font-size: 14px;
+.syukur-item__body {
+  margin: 22px 0;
+  font-size: 13.5px;
+  line-height: 25px;
+  color: #53526B;
 }
 
-.note-item__action {
+.syukur-item__action {
   display: flex;
 }
 
-.note-item__delete-button,.note-item__archive-button {
+.syukur-item__delete-button,.syukur-item__archive-button {
   display: block;
   width: 100%;
   background-color: transparent;
-  border: 0;
-  border-top: 1px solid #aaa;
+  border: none;
   padding: 8px 0;
   font-family: 'Inter', sans-serif;
   font-weight: bold;
   cursor: pointer;
 }
 
-.note-item__delete-button {
-  border-right: 1px solid #aaa;
-  color: #ff5f52;
+.syukur-search {
+  background-color: #ffffff;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 6px 0;
+  border-radius: 8px;
 }
 
-.note-item__archive-button {
-  color: #fff263;
+.syukur-search__form {
+  border: none;
 }
 
-.note-item__archive-button:hover {
-  color: #c49000;
+.syukur-search form input {
+  border: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 50px;
+  width: calc(100% - 58px);
 }
 
-.note-item__delete-button:hover {
-  color: #b00020;
+.syukur-search__search {
+  margin-left: 5px;
+  font-size: 13.5px;
+}
+
+.submit {
+  background-color: #ffffff;
+  border: none;
+  width: 40px;
 }
 
 @media only screen and (min-width: 500px) {
-  .notes-list {
+  .syukur-list {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media only screen and (min-width: 800px) {
-  .notes-list {
+  .syukur-list {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .note-search input {
+  .syukur-search input {
     min-width: 400px;
   }
 }
 
 @media only screen and (min-width: 800px) {
-  .notes-list {
+  .syukur-list {
     grid-template-columns: repeat(4, 1fr);
   }
 }
